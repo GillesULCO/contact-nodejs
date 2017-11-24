@@ -62,12 +62,6 @@ When(/^User clicks on remove button of the first contact$/, function (callback) 
 });
 
 Then(/^The first contact is removed$/, function (callback) {
-    this.browser.visit("http://localhost:3000/", (err) => {
-        if (err) throw err;
-        assert.ok(this.browser.success);
-
         checkList(this.browser);
-
         callback();
-    });
 });
